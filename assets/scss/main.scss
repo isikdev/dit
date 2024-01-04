@@ -1,0 +1,283 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
+// scss
+@import "_assets";
+@import "_root";
+@import "_elements";
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .5 ease;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: 'Ysabeau Office', sans-serif;
+    transition: all .5s ease;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+a,
+button {
+    cursor: pointer;
+}
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+.navbar {   
+    padding: 10px 0;
+    &__logo-btn {
+        margin-left: 40px;
+        button {
+            background: transparent;
+            border: 0 none;
+            outline: 0 none;
+            opacity: 1;
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+    &__social {
+        a {
+            text-decoration: none;
+            margin: 0 5px;
+            opacity: 1;
+            transition: all .3s ease;
+            &:hover {
+                opacity: .5;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    &__geo {
+        h3 {
+            font-weight: 500;
+            max-width: 200px;
+            margin-left: 45px;
+            span {
+                font-weight: 900;
+            }
+            &:nth-child(2){
+                max-width: 250px;
+            }
+        }
+    }
+    &__btn {
+        button {
+            margin: 0 10px;
+        }
+    }
+}
+.info {
+    background-image: url("../img/bg/main.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 250px 0;
+    &__intro {
+        text-align: center;
+        color: #fff;
+        h1 {
+            font-family: "Caveat", cursive;
+            font-size: 75px;
+        }
+        p {
+            font-size: 35px;
+            font-weight: 300;
+        }
+    }
+}
+.events {
+    margin: 50px 0;
+    &__intro {
+        h1 {
+            font-size: 45px;
+            font-weight: 900;
+        }
+    }
+    &__tab-head {
+        margin: 50px 0;
+        button {
+            &:nth-child(2){
+                margin-left: 15px;
+            }
+        }
+    }
+    &__tab-body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    &__card-intro {
+        background-color: $milk;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 25px;
+        max-width: 370px;
+        h1 {
+            font-size: 18px;
+            font-weight: 900;
+        }
+        p {
+            font-size: 20px;
+            margin: 12px 0 37px 0;
+        }
+        a {
+            text-decoration: none;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            font-family: "Caveat", cursive;
+            font-weight: 700;
+            color: #000;
+            img {
+                margin: 7px 0 0 10px;
+            }
+        }
+    }
+    &__card-intro-link {
+        transition: all .3s ease;
+        opacity: .8;
+        &:hover {
+            transform: translateX(15px);
+            opacity: 1;
+        }
+    }
+    &__tab-wrapper {
+        button {
+            margin: 0 auto;
+        }
+    }
+}
+.about {
+    background-image: url("../img/bg/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    margin: 250px 0 0 0;
+    position: relative;
+    .forest__elem {
+        position: absolute;
+        top: -345px;
+        left: 0;
+    }
+    &__content {
+        button {
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__intro {
+        color: #fff;
+        margin: 51px 0;
+        h1{
+            font-size: 45px;
+            font-weight: 900;
+            span {
+                font-family: "Caveat", cursive;
+            }
+        }
+    }
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    &__card {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 30px;
+    }
+    &__card-intro {
+        h1 {
+            color: #000;
+            font-size: 25px;
+            font-weight: 900;
+        }
+        p {
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            max-width: 400px;
+        }
+    }
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.03ms !important;
+        animation-iteration-count: 3 !important;
+        transition-duration: 0.03ms !important;
+        scroll-behavior: auto !important;
+    }
+}
